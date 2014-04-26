@@ -1,0 +1,28 @@
+waitress-example
+================
+
+An example URL shortener application to showcase what a Waitress application
+may look like.
+
+
+Getting Started
+---------------
+
+This assumes that you have your Go environment set up and $GOPATH configured.
+
+Clone the project and build it:
+
+$ git clone https://github.com/pnelson/waitress-example
+$ cd waitress-example
+$ go build
+$ ./waitress-example
+
+Create some shortcuts:
+
+$ curl -v -X POST -H "Content-Type: application/json" -d '{"url":"http://pnelson.ca"}' http://localhost:3000/
+
+You can create a bunch if you wish. Point your browser to short URL that has
+been created and you will be redirected. Or you can stay in your terminal and
+use curl again.
+
+$ curl -v -X GET http://localhost:3000/b
